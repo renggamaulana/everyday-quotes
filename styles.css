@@ -6,7 +6,7 @@
 
 .container {
     font-family: "Caveat", sans-serif;
-    background-image: url(./images/nature.jpg);
+    background-image: url(./images/black.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 
 h1{
     font-size: 56px;
-    color: linear-gradient(90deg, rgba(249,205,195,1) 0%, rgba(250,206,251,1) 35%);
+    color: rgb(224, 224, 224);
 }
 
 .quote {

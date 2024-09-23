@@ -1,7 +1,7 @@
 // Function to fetch a random quote from the API
 async function fetchQuote() {
     try {
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('http://api.quotable.io/random');
         const data = await response.json();
         console.log(data);
         return {
@@ -11,8 +11,8 @@ async function fetchQuote() {
     } catch (error) {
         console.error('Error fetching the quote:', error);
         return {
-            text: "Stay positive and keep pushing forward!",
-            author: "Unknown"
+            text: "Life is 10% what happens to us and 90% how we react to it.",
+            author: "Charles R. Swindoll"
         }; // Fallback quote and author
     }
 }
@@ -28,7 +28,7 @@ async function displayQuote() {
     const quoteData = await fetchQuote();
     const translatedQuote = await translateQuote(quoteData.text);
 
-    quoteElement.textContent = translatedQuote;
+    quoteElement.textContent = quoteData.text;
     authorElement.textContent = `- ${quoteData.author}`;
 
     // Re-add the show class to trigger the animation
